@@ -1,5 +1,8 @@
 package serverpackage;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
+
 import org.omg.CORBA.ORB;
 
 import ServerOperationApp.ServerOperationIDLPOA;
@@ -34,6 +37,13 @@ public class FrontEndServer extends ServerOperationIDLPOA {
 	}
 	public String transferRecord(String managerID, String recordID, String transferServerName) {
 		return null;
+	}
+	
+	public static void main(String[] args){
+		BullyServer b=new BullyServer();
+		b.setDaemon(false);
+		b.start();
+		
 	}
 
 }
